@@ -1,0 +1,29 @@
+Support:
+Definition: Support measures the frequency of occurrence of an itemset in the dataset. 
+It is calculated as the number of transactions containing the itemset divided by the total number of transactions in the dataset.
+
+Purpose: Support helps identify itemsets that are frequently occurring. 
+It is used to filter out infrequent itemsets, ensuring that only itemsets that meet a minimum support threshold are considered significant.
+
+Example: If you're analyzing customer purchase data, 
+the support of an itemset like {milk, bread} would be the number of transactions where both milk and bread are purchased divided by the total number of transactions.
+
+Confidence:
+Definition: Confidence measures the strength of the association between two itemsets in an association rule. 
+It is calculated as the support of the combined itemset (the antecedent and consequent of the rule) divided by the support of the antecedent itemset alone.
+
+Purpose: Confidence helps assess how likely it is that the presence of the antecedent itemset will result in the presence of the consequent itemset. 
+High confidence values indicate strong associations between the itemsets.
+
+Example: If you have an association rule {milk} -> {bread}, the confidence would be the support of {milk, bread} divided by the support of {milk}. 
+It tells you the probability that customers who buy milk will also buy bread.
+
+Lift:
+Definition: Lift measures the degree of association between two itemsets in an association rule, taking into account the independence of the items. 
+It is calculated as the ratio of the confidence of the rule to the support of the consequent itemset.
+
+Purpose: Lift helps assess whether the presence of the antecedent itemset has any influence on the presence of the consequent itemset beyond what would be expected by chance. 
+Lift values greater than 1 indicate a positive association, while values less than 1 suggest a negative or non-significant association.
+
+Example: For the rule {milk} -> {bread}, the lift would be calculated as (confidence of {milk} -> {bread}) / (support of {bread}). 
+A lift value greater than 1 would suggest that buying milk increases the likelihood of buying bread compared to random chance.
